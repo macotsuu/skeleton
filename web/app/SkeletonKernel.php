@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace Skeleton;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 
-class Kernel extends BaseKernel
+class SkeletonKernel extends BaseKernel
 {
     use MicroKernelTrait;
 }
