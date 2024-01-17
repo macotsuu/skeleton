@@ -1,15 +1,24 @@
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+./Icon?
+ehthumbs.db
+Thumbs.db
 
-###> symfony/framework-bundle ###
-/web/.env
-/web/.env.local
-/web/.env.local.php
-/web/.env.*.local
-/web/config/secrets/prod/prod.decrypt.private.php
-/web/public/bundles/
-/web/var/
-/web/vendor/
-###< symfony/framework-bundle ###
+/.idea/
+/.fleet/
+/.run/
 
+/composer.phar
+/auth.json
+/vendor/*
 
-###> idea configs ###
-.idea/
+web/.env
+.phpunit.cache/
+phpunit.xml
+.phpstan.cache/
+phpstan.neon
+.phpcs.cache
+phpcs.xml

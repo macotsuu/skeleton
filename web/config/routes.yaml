@@ -1,5 +1,0 @@
-controllers:
-    resource:
-        path: ../app/Controller/
-        namespace: Skeleton\Controller
-    type: attribute

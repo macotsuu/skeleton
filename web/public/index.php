@@ -1,9 +1,17 @@
 <?php
 
-use App\Kernel;
+require_once __DIR__ . '/../bootstrap/app.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
-require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+if (\getenv('APP_ENV') !== 'production') {
+    try {
+        $dotenv = \Dotenv\Dotenv::createImmutable(\dirname(__DIR__));
+        $dotenv->safeLoad();
+    } catch (\Dotenv\Exception\InvalidFileException) {
 
-return function (array $context) {
-    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
-};
+    }
+}
+
+$application = new \App\Application();
+$application->start();
+
