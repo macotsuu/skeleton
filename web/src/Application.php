@@ -4,7 +4,7 @@ namespace App;
 
 class Application
 {
-    public function start(): string
+    public function start(): void
     {
         echo 'Hello world';
     }
