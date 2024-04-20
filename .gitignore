@@ -1,24 +1,21 @@
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-./Icon?
-ehthumbs.db
-Thumbs.db
-
+# ide
 /.idea/
 /.fleet/
 /.run/
 
+# composer
 /composer.phar
 /auth.json
-/vendor/*
+/vendor
 
-web/.env
-.phpunit.cache/
+# phpunit
+.phpunit.cache
+coverage/
 phpunit.xml
-.phpstan.cache/
-phpstan.neon
+
+# phpcs
 .phpcs.cache
 phpcs.xml
+
+# phpstan
+phpstan.neon

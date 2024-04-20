@@ -2,11 +2,11 @@
 
 \error_reporting(\E_STRICT | \E_ALL);
 
-if (!\defined('PHP_VERSION_ID') || \PHP_VERSION_ID < 80100) {
+if (!\defined('PHP_VERSION_ID') || \PHP_VERSION_ID < 80200) {
     if (\PHP_SAPI === 'cli') {
-        echo 'Unsupported PHP Version, supported is  PHP 8.1.0 or later.';
+        echo 'Unsupported PHP Version, supported is  PHP 8.2.0 or later.';
     } else {
-        echo "<p>Unsupported PHP Version, supported is PHP 8.1.0 or later.</p>";
+        echo '<p>Unsupported PHP Version, supported is PHP 8.2.0 or later.</p>';
     }
 
     \http_response_code(503);
@@ -27,3 +27,12 @@ if (\PHP_SAPI !== 'cli') {
 \mb_language('uni');
 
 \date_default_timezone_set('UTC');
+
+if (\getenv('APP_ENV') !== 'production') {
+    try {
+        $dotenv = \Dotenv\Dotenv::createImmutable(\dirname(__DIR__));
+        $dotenv->safeLoad();
+    } catch (\Dotenv\Exception\InvalidFileException) {
+
+    }
+}

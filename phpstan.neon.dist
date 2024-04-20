@@ -1,5 +1,5 @@
 parameters:
-    level: max
-    tmpDir: .phpstan.cache
-    paths:
-        - web/
+	level: max
+	paths:
+		- src
+		- tests
