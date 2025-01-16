@@ -1,5 +1,17 @@
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - phpstan-baseline.neon
+
 parameters:
-	level: max
-	paths:
-		- src
-		- tests
+    level: max
+
+    paths:
+        - src/
+        - tests/
+
+    excludePaths:
+        - */vendor/
+
+    checkImplicitMixed: true
+    checkBenevolentUnionTypes: true
+    treatPhpDocTypesAsCertain: false

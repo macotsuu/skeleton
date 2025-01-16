@@ -2,20 +2,20 @@
 /.idea/
 /.fleet/
 /.run/
+/.vscode/
 
 # composer
-/composer.phar
-/auth.json
-/vendor
+composer.phar
+/vendor/
 
 # phpunit
 .phpunit.cache
-coverage/
 phpunit.xml
 
-# phpcs
-.phpcs.cache
-phpcs.xml
+# php-cs-fixer
+.php-cs-fixer.cache
+.php-cs-fixer.php
 
 # phpstan
-phpstan.neon
+.phpstan.cache
+.phpstan.neon

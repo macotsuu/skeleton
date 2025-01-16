@@ -1,38 +1,36 @@
 {
-	"name": "nulldark/skeleton",
-    "description": "Boilerplate PHP application.",
-	"type": "project",
+    "name": "vendor/project_name",
+    "description": ":project_description",
+    "type": "project",
     "support": {
-        "issues": "https://github.com/nuldark/boilerplate-php-application/issues",
-        "source": "https://github.com/nuldark/boilerplate-php-application"
+        "issues": "https://github.com/:vendor/project_name/issues",
+        "source": "https://github.com/:vendor/project_name"
     },
     "require": {
-		"php": ">=8.2",
-		"ext-mbstring": "*",
-		"vlucas/phpdotenv": "^5.6"
-	},
-	"require-dev": {
-		"ionbytes/coding-standard": "^1.0",
-        "phpstan/phpstan": "^2.0.x-dev",
-		"phpunit/phpunit": "^11.2-dev"
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"autoload": {
-		"psr-4": {
-			"App\\": "app/Application/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"App\\Tests\\Unit\\": "tests/unit/",
-            "App\\Tests\\Integration\\": "tests/integration/"
-		}
-	},
+        "php": ">=8.2",
+        "ext-mbstring": "*",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.68",
+        "phpstan/phpstan": "^2.1.x-dev",
+        "phpstan/phpstan-strict-rules": "^2.0.x-dev",
+        "phpunit/phpunit": "^11.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\Integration\\": "tests/integration/",
+            "App\\Tests\\Unit\\": "tests/unit/"
+        }
+    },
     "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        },
         "optimize-autoloader": true,
         "platform": {
             "php": "8.2.15"
@@ -43,16 +41,5 @@
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
-    },
-    "scripts": {
-        "check": [
-            "@phpcs",
-            "@phpstan",
-            "@phpunit"
-        ],
-        "phpcbf": "phpcbf",
-        "phpcs": "phpcs",
-        "phpstan": "phpstan analyze",
-        "phpunit": "phpunit --colors=always"
     }
 }
